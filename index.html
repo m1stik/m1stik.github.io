@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Landing</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+  <center>
+  <h1>SLOTS</h1>
+	<div class="slot_body">
+		<img id="image1" class="slot_pics" src="img/apple.png" height="150" width="150">
+		<img id="image2" class="slot_pics" src="img/apple.png" height="150" width="150">
+		<img id="image3" class="slot_pics" src="img/apple.png" height="150" width="150">
+		<br>
+	<p>Ваши монетки: <b id="coins">100</b></p>
+	<script>
+	var score = 100;
+	document.write('<button onClick="imgsrc ()">Играть! (10 монет)</button></div></center>');
+	
+    function imgsrc () {
+		score = score - 10;
+		document.getElementById('coins').innerHTML = score;
+		document.getElementById('image1').src = 'img/spin1.gif';
+		document.getElementById('image2').src = 'img/spin2.gif';
+		document.getElementById('image3').src = 'img/spin3.gif';
+		
+		setInterval('stop11 ()', 9000);
+	    rand1 = Math.floor(Math.random() * 3);
+		rand2 = Math.floor(Math.random() * 3);
+		rand3 = Math.floor(Math.random() * 3);
+				if (score == 0) {
+		
+		setInterval('location.reload();', 5000);
+		}	
+	}
+	
+			function stop11 () {
+		if (rand1 == 0) {
+			document.getElementById('image1').src = 'img/apple.png';
+			}
+		if (rand1 == 1) {
+			document.getElementById('image1').src = 'img/coin.png';
+			}
+		if (rand1 == 2) {
+			document.getElementById('image1').src = 'img/melon.png';
+			}
+			
+		if (rand2 == 0) {
+			document.getElementById('image2').src = 'img/apple.png';
+			}
+		if (rand2 == 1) {
+			document.getElementById('image2').src = 'img/coin.png';
+			}
+		if (rand2 == 2) {
+			document.getElementById('image2').src = 'img/melon.png';
+			}
+		
+		if (rand3 == 0) {
+			document.getElementById('image3').src = 'img/apple.png';
+			}
+		if (rand3 == 1) {
+			document.getElementById('image3').src = 'img/coin.png';
+			}
+		if (rand3 == 2) {
+			document.getElementById('image3').src = 'img/melon.png';
+			}	
+		}
+	
+	function img1 () {
+		document.getElementById('image1').src = 'img/coin.png';
+	}
+	function img2 () {
+		document.getElementById('image2').src = 'img/apple.png';
+	}
+	function img3 () {
+		document.getElementById('image3').src = 'img/melon.png';
+	}
+	function stop1 () {
+		document.getElementById('image1').src = 'img/apple.png';
+		document.getElementById('image2').src = 'img/apple.png';
+		document.getElementById('image3').src = 'img/apple.png';
+	}
+  </script>
+  
+  </body>
+  </html>
